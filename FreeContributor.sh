@@ -98,11 +98,11 @@ rootcheck(){
 install_packages(){
 #    pacman        by Arch Linux/Parabola, ArchBang, Manjaro, Antergos, Apricity OS
 #    dpkg/apt-get  by Debian, Ubuntu, ElementaryOS, Linux Mint, etc ...
-#    yum/rpm/dnf   by Redhat, CentOS, Fedora, etc ...
+#    yum/rpm/dnf   by Red Hat, CentOS, Fedora, etc ...
 #    zypper        by OpenSUSE
-#    portage       by Gentoo (this guys don't need this script)
+#    portage       by Gentoo (these guys don't need this script)
 #
-# Find out the package manager
+# Determine which package manager is being used
 # https://github.com/icy/pacapt
 # https://github.com/quidsup/notrack/blob/master/install.sh
 
@@ -120,7 +120,7 @@ install_packages(){
 
 #  elif [[ -x "/usr/bin/zypper" ]]; then
   else
-    echo "Unable to work out which package manage is being used."
+    echo "Unable to determine which package manager is being used."
 
   fi
 }
@@ -317,11 +317,11 @@ pdnsd-config(){
 
 
 finish(){
-  echo "FreeContributor sucessufull installed"
+  echo "FreeContributor successfully installed"
   echo "Enjoy surfing in the web"
 }
 
-start-deamons(){
+start-daemons(){
 #https://github.com/DisplayLink/evdi/issues/11#issuecomment-193877839
 ## TODO
 ## for each case: dnsmasq, unbound and pdnsd
@@ -363,7 +363,7 @@ main(){
    esac
 
    finish
-   #start-deamons
+   #start-daemons
 }
 
 main
